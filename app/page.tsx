@@ -59,7 +59,7 @@ import {
   ShieldCheckIcon as Shield,
   ChartBarIcon,
 } from "@heroicons/react/20/solid";
-import MyNavBar from "./components/myNavbar";
+
 import Sample from "./components/pages/Sample";
 
 export default function Example() {
@@ -684,7 +684,6 @@ export default function Example() {
         </Sidebar>
       }
     >
-      {/* <MyNavBar /> */}
       {/* The page content */}
       <Sample />
       <Avatar />
