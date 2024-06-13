@@ -1,8 +1,9 @@
 import Image from "next/image";
-import { Avatar } from "./components/avatar";
-import Placeholder from "./components/pages/Placeholder";
-import { GetUrl } from "./components/GetUrl";
+import { Avatar } from "../components/avatar";
+import Placeholder from "../components/pages/Placeholder";
+import { GetUrl } from "../components/GetUrl";
 import Link from "next/link";
+import MyNavbar from "../components/myNavbar";
 import {
   Dropdown,
   DropdownButton,
@@ -10,13 +11,13 @@ import {
   DropdownItem,
   DropdownLabel,
   DropdownMenu,
-} from "./components/dropdown";
+} from "../components/dropdown";
 import {
   Navbar,
   NavbarItem,
   NavbarSection,
   NavbarSpacer,
-} from "./components/navbar";
+} from "../components/navbar";
 import {
   Sidebar,
   SidebarBody,
@@ -27,8 +28,8 @@ import {
   SidebarLabel,
   SidebarSection,
   SidebarSpacer,
-} from "./components/sidebar";
-import { SidebarLayout } from "./components/sidebar-layout";
+} from "../components/sidebar";
+import { SidebarLayout } from "../components/sidebar-layout";
 import {
   ArrowRightStartOnRectangleIcon,
   ChevronDownIcon,
@@ -59,15 +60,9 @@ import {
   DocumentIcon,
   ShieldCheckIcon as Shield,
   ChartBarIcon,
-  ExclamationTriangleIcon,
-  HandThumbUpIcon,
-  BarsArrowUpIcon,
-  UsersIcon,
-  MagnifyingGlassCircleIcon,
 } from "@heroicons/react/20/solid";
 
-import Sample from "./components/pages/Sample";
-import { ExclamationCircleIcon } from "@heroicons/react/20/solid";
+import Sample from "../components/pages/Sample";
 
 export default function Example() {
   return (
@@ -162,106 +157,23 @@ export default function Example() {
                   anchor="bottom start"
                 >
                   <DropdownItem href="/teams/1/settings">
-                    <HandThumbUpIcon className="fill-green-600" />
-                    <DropdownLabel className="text-green-600">
-                      NYE Ball
-                    </DropdownLabel>
+                    <Cog8ToothIcon />
+                    <DropdownLabel>Upcoming</DropdownLabel>
                   </DropdownItem>
 
                   <DropdownItem href="/teams/1/settings">
-                    <HandThumbUpIcon className="fill-green-600" />
-                    <DropdownLabel className="text-green-600">
-                      Memorial Day Dance Event{" "}
-                    </DropdownLabel>
+                    <Cog8ToothIcon />
+                    <DropdownLabel>Booked</DropdownLabel>
                   </DropdownItem>
 
                   <DropdownItem href="/teams/1/settings">
-                    <HandThumbUpIcon className="fill-green-600" />
-                    <DropdownLabel className="text-green-600">
-                      Casual Gatherings
-                    </DropdownLabel>
+                    <Cog8ToothIcon />
+                    <DropdownLabel>Active</DropdownLabel>
                   </DropdownItem>
 
                   <DropdownItem href="/teams/1/settings">
-                    <ExclamationTriangleIcon className="fill-yellow-500" />
-                    <DropdownLabel className="text-yellow-500">
-                      Dave&apos;s Wedding
-                    </DropdownLabel>
-                  </DropdownItem>
-
-                  <DropdownItem href="/teams/1/settings">
-                    <ExclamationTriangleIcon className="fill-yellow-500" />
-                    <DropdownLabel className="text-yellow-500">
-                      Retirement Dinner for Mike
-                    </DropdownLabel>
-                  </DropdownItem>
-
-                  <DropdownItem href="/teams/1/settings">
-                    <ExclamationTriangleIcon className="fill-yellow-500" />
-                    <DropdownLabel className="text-yellow-500">
-                      Celebration of Life for Guy
-                    </DropdownLabel>
-                  </DropdownItem>
-
-                  <DropdownItem href="/teams/1/settings">
-                    <ExclamationCircleIcon className="fill-red-700" />
-                    <DropdownLabel className="text-red-500">
-                      Jones and Jackson Wedding
-                    </DropdownLabel>
-                  </DropdownItem>
-
-                  <DropdownItem href="/teams/1/settings">
-                    <ExclamationCircleIcon className="fill-red-700" />
-                    <DropdownLabel className="text-red-500">
-                      Battson Reception - Outdoor
-                    </DropdownLabel>
-                  </DropdownItem>
-
-                  <DropdownItem href="/teams/1/settings">
-                    <ExclamationCircleIcon className="fill-red-700" />
-                    <DropdownLabel className="text-red-500">
-                      Stephanie Gibbons Baptism
-                    </DropdownLabel>
-                  </DropdownItem>
-
-                  <DropdownItem href="/searchSample">
-                    <MagnifyingGlassCircleIcon />
-                    <DropdownLabel className="font-bold">
-                      Search All Events
-                    </DropdownLabel>
-                  </DropdownItem>
-
-                  <DropdownItem>
-                    <MagnifyingGlassCircleIcon />
-                    <DropdownLabel className="font-bold">
-                      <div className="flex rounded-md shadow-sm">
-                        <div className="relative flex flex-grow items-stretch focus-within:z-10">
-                          <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-                            <UsersIcon
-                              className="h-5 w-5 text-gray-400"
-                              aria-hidden="true"
-                            />
-                          </div>
-                          <input
-                            type="email"
-                            name="email"
-                            id="email"
-                            className="block w-full rounded-none rounded-l-md border-0 py-1.5 pl-10 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                            placeholder="Name, location, date..."
-                          />
-                        </div>
-                        <button
-                          type="button"
-                          className="relative -ml-px inline-flex items-center gap-x-1.5 rounded-r-md px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
-                        >
-                          {/*                           <BarsArrowUpIcon
-                            className="-ml-0.5 h-5 w-5 text-gray-400"
-                            aria-hidden="true"
-                          /> */}
-                          Search
-                        </button>
-                      </div>
-                    </DropdownLabel>
+                    <Cog8ToothIcon />
+                    <DropdownLabel>Archived</DropdownLabel>
                   </DropdownItem>
                 </DropdownMenu>
               </Dropdown>
@@ -705,38 +617,11 @@ export default function Example() {
             </SidebarSection>
             <DropdownDivider className="mt-8" />
             <SidebarSection className="max-lg:hidden">
-              <SidebarHeading className="text-slate-900 font-bold text-base">
-                <span className="text-red-600 font-bold text-base">
-                  Upcoming Events
-                </span>
-              </SidebarHeading>
-              <SidebarItem href="/events/1">
-                Dave and Brenda&apos;s Wedding
-              </SidebarItem>
-              <SidebarItem href="/events/2">
-                Close on Sale of Business
-              </SidebarItem>
-              <DropdownDivider className="mt-8" />
-              <SidebarHeading className="text-red-600 font-bold text-base">
-                <span className="text-red-600 font-bold text-base">
-                  Proposals Due This Week
-                </span>
-              </SidebarHeading>
-              <SidebarItem href="/events/1">
-                Smith and Johnson Wedding
-              </SidebarItem>
-              <DropdownDivider className="mt-8" />
-              <SidebarHeading>
-                <span className="text-red-600 font-bold text-base">
-                  Requires Your Attention!
-                </span>
-              </SidebarHeading>
-              <SidebarItem href="/events/1">
-                &middot; E&O Insurance expiring....
-              </SidebarItem>
-              <SidebarItem href="/events/1">
-                &middot; Event property confirmation due
-              </SidebarItem>
+              <SidebarHeading>The Hot Sheets</SidebarHeading>
+              <SidebarItem href="/events/1">High Interest Item 1</SidebarItem>
+              <SidebarItem href="/events/2">High Interest Item 2</SidebarItem>
+              <SidebarItem href="/events/3">High Interest Item 3</SidebarItem>
+              <SidebarItem href="/events/4">High Interest Item 4</SidebarItem>
             </SidebarSection>
             <DropdownDivider />
             <SidebarSpacer />
@@ -801,8 +686,9 @@ export default function Example() {
         </Sidebar>
       }
     >
-      {/* The page content 
-      Left nav demo: <Link href={`/`}>/</Link>*/}
+      {/* The page content */}
+      {/* <MyNavbar /> */}
+      Left nav demo: <Link href={`/`}>/</Link>
       <GetUrl />
       <Sample />
       <Avatar />
